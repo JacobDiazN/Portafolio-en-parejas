@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio Jacob Díaz</title>
+    
+    <!-- Font Awesome -->
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
+    
+    <!-- Boostrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Biblioteca de toastify.js -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- CSS Personalizado-->
+    <link rel="stylesheet" href="/assets/style/style.css" />
+    
+  </head>
+  <body class="bg-dark2">
+    <header class="fixed-top py-4 bg-dark3" id="navegacion">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid mx-5">
+          <a class="navbar-brand text-light" href="#">Portafolio</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+              <a class="nav-link text-light" href="#cardJacob">Acerca de Jacob</a>
+              <a class="nav-link text-light" href="#cardManuel">Acerca de Manuel</a>              
+              <a class="nav-link text-light" href="#formulario">Contacto</a>
+            </div>            
+            <div class="navbar-nav ms-auto">
+              <button id="AlternarTema" class="btn btn-outline-light">Cambiar Tema</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="particles-js"></div>  
+    <main class="pt-5">
+      <section class="container mt-5 pt-5 text-center">
+        <h1>Portafolio</h1>
+      </section>
+      <section class="container pb-5 text-center">
+        <h3>Jacob Díaz - Manuel Oliveros</h3>
+      </section>
+      <hr class="container card-text roboto-thin text-dark text-justify mt-3 mb-5">               
+
+      <!-- Sección Jacob -->
+      <section class="container pb-5" style="width: 95%;">
+        <div class="row text-dark">
+            <div class="col-lg-6 col-sm-12 p-3 d-flex align-items-center justify-content-center ">
+              <div id="cardJ" class="card card1 shadow-lg" onmouseover="enlargeCard(this)" onmouseout="resetCardSize(this)">
+                <div class="card-header text-center">                        
+                  <a class="px-4 glowing-icon" href="https://github.com/JacobDiazNs" target="_blank">
+                    <i class="fa-brands fa-github fa-3x text-dark"></i>
+                  </a>  
+                  <a class="px-4 glowing-icon" href="https://www.linkedin.com/in/jacob-diaz-navarro-b37233158/" target="_blank">
+                    <i class="fa-brands fa-linkedin fa-3x text-dark"></i>
+                  </a>                
+                </div>             
+                <div class="card-body">
+                    <h5 id="cardJacob" class="card-title roboto-light text-dark text-center pb-3 mb-2">Jacob Díaz</h5>
+                    <div class="card-header text-center">
+                      <img src="assets/img/Jacob2.png" alt="logo_Jacob" style="width: 100%; border-radius: 10px;">
+                    </div> 
+                    <div id="dynamicText" class="card-text roboto-thin text-center text-dark text-justify mt-3 "></div>                   
+                    <button class="btn btn-outline-secondary botonVerMas mt-3"  onclick="mostrarDetallesJacob()">Ver Más</button>                                                      
+                </div>
+              </div>
+            </div>
+            <!-- div oculto de Jacob hasta que se clickee el boton ver mas-->
+            <div id="r3" class="col-lg-6 col-sm-12 py-3 d-flex align-items-center justify-content-center text-dark">
+              <div id="detallesJacob" style="display: none;">
+                <div class="text-center pb-5">
+                  <h1>👋 ¡Hola, soy Jacob Díaz!</h1>
+                </div>            
+                <h3>🚀 Sobre mí</h3>
+                <p>
+                  Soy un desarrollador de software en formación con una gran pasión por crear aplicaciones web y móviles que solucionen problemas reales. Mi camino en el desarrollo comenzó en 2022, y desde entonces no he dejado de aprender y crecer en este emocionante mundo.
+                </p>
+                <h2>🎓 <strong>Formación Académica</strong></h2>
+                <ul>
+                  <li>Actualmente curso el 4° año de <strong>Ingeniería Informática Multimedia</strong> en la <strong>Universidad UNIACC</strong>.</li>
+                  <li>En 2019, inicié mi formación con un bootcamp de desarrollo <strong>Full Stack</strong>, que me motivó a profundizar mis conocimientos y continuar mi formación universitaria.</li>
+                  <li>En 2023-2024, concluí un <strong>Bootcamp de Full Stack Java Trainee</strong>, gracias a una beca que me permitió fortalecer aún más mis habilidades en el desarrollo de software.</li>
+                  <li>Actualmente, estoy realizando un curso de bases de datos en <strong>Talento Digital</strong>.</li>
+                </ul>
+                <h3>🎉 Otros Logros</h3>
+                <ul>
+                  <li><strong>Insignia digital por término del Bootcamp de Java Fullstack Trainee (2023 - 2024):</strong></li>
+                </ul>
+                <div style="text-align: center;">
+                  <img src="assets/img/unnamed.png" alt="logo_Medalla" style="width: 20%;">
+                </div>
+                <h3>📫 Contacto</h3>
+                <p>
+                  Puedes contactarme a través de mi LinkedIn: <i class="fa-solid fa-link fa-sm"></i> <a href="https://www.linkedin.com/in/jacob-diaz-navarro-b37233158/" target="_blank">LinkedIn</a><br>
+                  Puedes conocer todos mis repositorios en: <i class="fa-solid fa-link fa-sm"></i> <a href="https://github.com/JacobDiazN?tab=repositories" target="_blank">GitHub</a>
+                </p>
+                <button class="btn btn-outline-secondary botonVerMas2 mt-3  d-lg-none"  onclick="mostrarDetallesJacob()">Ver Más</button>
+              </div>
+          </div>
+        </div>
+        <hr class="mt-5 text-dark">
+      </section>
+            
+      <!-- Sección Manuel -->
+      <section class="container" style="width: 95%;">
+        <div class="row text-dark">
+          <div class="col-lg-6 col-sm-12 p-3 d-flex align-items-center justify-content-center ">
+            <div id="cardM" class="card card1 shadow-lg" onmouseover="enlargeCard(this)" onmouseout="resetCardSize(this)">
+              <div class="card-header text-center">                        
+                <a class="px-4 glowing-icon" href="www.facebook.com" target="_blank">
+                  <i class="fa-brands fa-facebook fa-3x text-dark"></i>
+                </a>
+                <a class="px-4 glowing-icon" href="www.instagram.com" target="_blank">
+                  <i class="fa-brands fa-instagram fa-3x text-dark"></i>
+                </a>                   
+              </div>                    
+              <div class="card-body">
+                  <h5 id="cardManuel" class="card-title roboto-light text-dark text-center pb-3">Manuel Olivares</h5>
+                  <div class="card-header text-center">
+                    <img src="assets/img/Manuel.png" alt="logo_Manuel" style="width: 100%; border-radius: 10px;">
+                  </div>
+                  <div id="dynamicText2" class="card-text roboto-thin text-center text-dark text-justify mt-3 "></div>
+                  <button class="btn btn-outline-secondary botonVerMas mt-3"  onclick="mostrarDetallesManuel()">Ver Más</button>                                                      
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12 py-3 d-flex align-items-center justify-content-center text-dark">
+            <div id="detallesManuel" style="display: none;">
+              <div id="verMasManuel" class="text-center pb-5">
+                <h1>👋 ¡Hola, soy Manuel Olivares!</h1>
+              </div>            
+              <h3>🚀 Sobre mí</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, molestias facilis deleniti recusandae quisquam ex asperiores at accusamus voluptatem autem libero culpa necessitatibus dolorem voluptas quod atque sed assumenda odio illo suscipit rerum veniam quidem doloribus. Consectetur praesentium sed consequuntur cum iure distinctio.
+              </p>
+              <h2>🎓 <strong>Formación Académica</strong></h2>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptates explicabo asperiores optio.</li>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ullam ducimus eos error atque corrupti non laborum accusamus cum exercitationem ratione, amet expedita harum.</li>
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, aut cupiditate delectus tempora deleniti eveniet. Architecto porro amet, dolores eos veniam animi repellat odit tempora, adipisci fugit velit?</li>
+                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur excepturi eligendi omnis!</strong>.</li>
+              </ul>
+              <h3>🎉 Otros Logros</h3>
+              <ul>
+                <li><strong>Estoy realizando un curso de Base de Datos en Aula Digital</strong></li>
+              </ul>              
+              <h3>📫 Contacto</h3>
+              <p>
+                Puedes contactarme a través de mi Facebook: <i class="fa-solid fa-link fa-sm"></i> <a href="www.facebook.com" target="_blank">Facebook</a><br>
+                Puedes contactarme a través de mi Instagram: <i class="fa-solid fa-link fa-sm"></i> <a href="www.instagram.com" target="_blank">Instagram</a>
+              </p>
+              <button class="btn btn-outline-secondary botonVerMas2 mt-3 d-lg-none"  onclick="mostrarDetallesManuel()">Ver Más</button>
+            </div>
+        </div>
+        </div>
+        <hr class="mt-5 pb-5 text-dark">
+      </section>
+      
+      <section class="container my-5">
+          <div class="text-center text-dark mb-4 ">
+              <h4 id="formulario" class="roboto-medium">Contacto</h4>
+          </div>
+      </section>
+      <section class="container pb-5">
+          <div>
+              <form id="formularioContacto" class="d-flex justify-center" action="https://formsubmit.co/contactovimedia@gmail.com" method="post" >
+                  <div class="container" style="width: 56rem;">
+                      <div class="mb-3">
+                          <label for="nombre" class="form-label text-dark roboto-light">Nombre:</label>
+                          <input type="text" name="name" class="form-control text-dark" id="nombre" placeholder="Escribe tu nombre">
+                      </div>
+                      <div class="mb-3">
+                          <label for="correo" class="form-label text-dark roboto-light">Email:</label>
+                          <input type="email" name="email" class="form-control text-dark" id="correo" placeholder="Escribe tu Email">
+                      </div>
+                      <div class="mb-3">
+                          <label for="mensaje" class="form-label text-dark roboto-light">Mensaje:</label>
+                          <textarea  name="comments" class="form-control text-dark" id="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+                      </div>
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-5">
+                          <button id="enviar" type="submit"  class="btn gris-500 text-dark">Enviar</button>
+                      </div>
+                      <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#">
+                      <input type="hidden" name="_captcha" value="false">
+                  </div>                        
+              </form>
+          </div>
+      </section>     
+    </main>
+    
+    <footer class="bg-dark3 py-4">   
+      <section class="container">              
+          <div class="row justify-content-center">
+              <div class="col-auto lobster-regular mx-4 py-4">
+                  <div class="text-center raleway-regular fs-20 text-light">
+                      <span>Chile © 2024 <em> Manuel Olivares - Jacob Díaz</em></span>
+                  </div>
+              </div>
+          </div>          
+      </section>      
+    </footer>
+
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+
+    <!-- stats.js lib --> 
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Boostrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Plugin Equal Heights, este plugin nos ayuda a que las card siempre tengan el mismo tamaño con el resto independiente de su contenido-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+
+    <!-- Tooltip -->
+    <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+
+    <script src="assets/script/script.js"></script>
+  </body>
+</html>
+r
