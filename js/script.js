@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             gravity: "center", // Posición del mensaje en la pantalla
             backgroundColor: "#FF5733", // Color de fondo del mensaje (naranjo)
         }).showToast();
-    });
+    });r
 });
 
 /* Citas rotativas dentro de las card de Jacob */
@@ -137,8 +137,6 @@ function mostrarDetallesManuel() {
     let card = document.querySelector("#cardM .card-body");
     card.style.height = detalles.style.display === "block" ? "auto" : "initial";
 }
-
-
 
 particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},
     "color":{"value":"#6c757d"},"shape":{"type":"circle","stroke":{"width":0,"color":"#6c757d"},
